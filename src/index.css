@@ -12,7 +12,9 @@
 body{
   min-height: 100vh;
 }
-
+main{
+  min-height: 100vh;
+}
 /* Add default heading styles since Tailwind resets them */
 h1 {
   font-size: 2rem;

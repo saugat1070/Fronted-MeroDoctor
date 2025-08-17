@@ -144,6 +144,28 @@ export default function Home() {
             </button>
             </div>
           </div>
+          {/* Recent Activity */}
+        <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-100">
+        <div className="p-6 border-b border-gray-100">
+          <h2 className="text-xl font-semibold text-gray-900">Recent Activity</h2>
+        </div>
+        <div className="p-6">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-4 text-sm">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span className="text-gray-600">Appointment confirmed with Dr. Sarah Johnson</span>
+            </div>
+            <div className="flex items-center space-x-4 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span className="text-gray-600">Lab results uploaded to your account</span>
+            </div>
+            <div className="flex items-center space-x-4 text-sm">
+              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+              <span className="text-gray-600">Prescription refill reminder sent</span>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   );
