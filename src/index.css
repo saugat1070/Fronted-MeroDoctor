@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Quicksand:wght@300..700&display=swap');
+/* Additional styles can go here */
+
+
+*{
+  /* margin: 0px;
+  padding: 0px; */
+  font-family: "Mozilla Headline", sans-serif;
+}
+
+body{
+  min-height: 100vh;
+}
+
+/* Add default heading styles since Tailwind resets them */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
