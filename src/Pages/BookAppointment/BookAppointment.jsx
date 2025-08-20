@@ -3,7 +3,7 @@ import Confirmation from './Confirmation';
 import Doctor from './Doctor';
 import Speciality from './Speciality';
 import { ArrowLeft, Speaker } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,7 +13,7 @@ export default function BookAppointment() {
   const [step,setStep] = useState(1);
   const [booking,setBooking] = useState({
     speciality : "",
-    doctor : "",
+    doctor : {},
     date_time :""
   })
 
@@ -65,7 +65,7 @@ export default function BookAppointment() {
       case 1:
         return (<Speciality booking={booking} setBooking={setBooking} specialties={specialties} setStep={setStep}/>)
       case 2:
-        return (<Doctor/>)
+        return (<Doctor booking={booking} setBooking={setBooking} doctors={doctors} setStep={setStep}/>)
       case 3:
         return (<Confirmation/>)
       default:
@@ -79,7 +79,7 @@ export default function BookAppointment() {
     <div className='m-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8'>
       <div className='mb-8'>
         <button className='text-blue-600 hover:text-blue-700 font-medium mb-4 flex cursor-pointer'>
-          <ArrowLeft/> <p>Back to Dashboard</p>
+          <Link to="/"><ArrowLeft/> <p>Back to Dashboard</p></Link>
         </button>
      
 
