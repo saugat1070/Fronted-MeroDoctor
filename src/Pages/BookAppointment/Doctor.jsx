@@ -41,9 +41,13 @@ export default function Doctor({ booking, setBooking, doctors, setStep }) {
                   ? "border-blue-500 bg-blue-50"
                   : "border-gray-200 hover:border-blue-300"
               }`}
-              onClick={() => setBooking((prev)=>({...prev,
+              onClick={() => {
+                setBooking((prev)=>({...prev,
                 doctor : doctor
-              }))}
+              }))
+              setStep(3);
+            }
+            }
             >
               <div className="flex items-start space-x-4">
                 <img

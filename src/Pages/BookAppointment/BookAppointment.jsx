@@ -4,7 +4,7 @@ import Doctor from './Doctor';
 import Speciality from './Speciality';
 import { ArrowLeft, Speaker } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import TimeDate from './timeDate';
 
 
 
@@ -14,7 +14,10 @@ export default function BookAppointment() {
   const [booking,setBooking] = useState({
     speciality : "",
     doctor : {},
-    date_time :""
+    date_time :"",
+    timeSlots : "",
+    appointmentType : "",
+    patientNotes : ""
   })
 
   const specialties = [
@@ -67,8 +70,10 @@ export default function BookAppointment() {
       case 2:
         return (<Doctor booking={booking} setBooking={setBooking} doctors={doctors} setStep={setStep}/>)
       case 3:
-        return (<Confirmation/>)
-      default:
+        return (<TimeDate booking={booking} setBooking={setBooking} setStep={setStep} timeSlots={timeSlots}/>)
+      case 4:
+        return (<Confirmation booking={booking} setBooking={setBooking} setStep={setStep}/>)
+    default:
         return <Speciality/>
     }
   }
